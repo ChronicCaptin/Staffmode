@@ -32,10 +32,10 @@ options:
     stafferscanseeotherstaffer: false # if true staff can see the others staffers while vanish
   report:
     format:
-     - "&7&m----------&r&7[ &c&rReport &r&7]&r&7§&----------")
-     - "§cReporter§7: %reporter%"
-     - "§cReported§7: %reported%"
-     - "§cReason§7: %reason%"
+     - "&7&m----------&r&7[ &c&lReport &r&7]&r&7§&----------"
+     - "&cReporter&7: %reporter%"
+     - "&cReported&7: %reported%"
+     - "&cReason&7: %reason%"
   freeze:
     guiname: "&cFrozen"
     papername: "&7Join ts"
