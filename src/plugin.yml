@@ -1,0 +1,34 @@
+name: Staff
+version: 0.1
+author: [Mr_Replete]
+main: it.mr_replete.staff.Staff
+commands:
+  vanish:
+    description: Vanish command
+    aliases: [v]
+  staffmode:
+    description: Staffmode
+    aliases: [staff]
+  staffchat:
+    description: Staffchat
+    aliases: [sc]
+  god:
+    description: God
+  freeze:
+    description: Freeze
+  verif:
+    description: Verif
+  report:
+    description: Report
+
+permissions:
+  staff.staffmode:
+    description: Allow to put you in staffmode
+  staff.vanish:
+    description: Allow to put you in vanish
+  staff.chat:
+    description: Allow to use staffchat
+  staff.god:
+    description: Allow to use god
+  staff.verif:
+    description: Allow to verif

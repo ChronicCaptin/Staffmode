@@ -1,0 +1,80 @@
+
+
+messages:
+  freezemessage: "&aSei stato freezato da %staffer%"
+  unfreezemessage: "&aSei stato unfreezato da %staffer%"
+  freezestaffmessage: "&aHai freezato %player%"
+  unfreezestaffmessage: "&aHai unfreezato %player%"
+  nopermission: "&cNon hai il permesso!"
+  vanish: "&7Vanish %state%"
+  vanishon: "&aattivata" # you can replace it with ON
+  vanishoff: "&cdisattivata" # you can replace it with OFF
+  staffmode: "&7StaffMode %state%"
+  staffmodeon: "&aattivata" # you can replace it with ON
+  staffmodeoff: "&cdisattivata" # you can replace it with OFF
+  god: "&7God %state%"
+  godon: "&aattivata" # you can replace it with ON
+  godoff: "&cdisattivatas"  # you can replace it with OFF
+  reportdelay: "&cDevi aspettare altri %seconds% secondi"
+  autoclick: "&7(&c&l!&7) &c%player% &7might be using AutoClicker &c%clicks%&7CPS with &c%ping%ms"
+
+options:
+  clicks:
+    active: true
+    amountofclicks: 16 # minimum clicks for notify clicking (CPS)
+  report:
+    commandelay: 60 # in seconds
+  staffonlineinventory:
+    title: "&bStaffers online: %staffcount%"
+  staffchat:
+    format: "&7[&3StaffChat&7] &b%player%&7: &3%message%"
+  vanish:
+    stafferscanseeotherstaffer: false # if true staff can see the others staffers while vanish
+  report:
+    format:
+     - "&7&m----------&r&7[ &c&rReport &r&7]&r&7§&----------")
+     - "§cReporter§7: %reporter%"
+     - "§cReported§7: %reported%"
+     - "§cReason§7: %reason%"
+  freeze:
+    guiname: "&cFrozen"
+    papername: "&7Join ts"
+    banonquit: true # if true ban player if he is frozen ps: fill in the slog ban command
+    slogbancommand: "ban %player%" # Without slash (/)
+    slogmessage: "&6%player% &ce' uscito dal gioco mentre era freezato" # Only for staffers
+    paperlore:
+      - "&eYou are frozen"
+      - "&ejoin ts.yourserver.it"
+
+items:
+  # Slot typ: 1 will be the first and 8 the last one (HotBar)
+  freeze:
+    slot: 3
+    active: true
+    name: "&cFreeze"
+  staffers:
+    slot: 5
+    active: true
+    name: "&bStaffer(s) Online"
+  vanish:
+    slot: 7
+    active: true
+    name: "&eVanish %state%"
+    stateon: "&aON"
+    stateoff: "&cOFF"
+  randomtp:
+    slot: 8
+    active: true
+    name: "&eRandom TP"
+  verif:
+    slot: 1
+    active: true
+    name: "&cVerif"
+  follow:
+    slot: 4
+    active: true
+    name: "&eFollow!"
+  speed:
+    slot: 6
+    active: true
+    name: "&bSpeed"
