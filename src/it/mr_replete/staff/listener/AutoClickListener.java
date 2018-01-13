@@ -19,7 +19,6 @@ public class AutoClickListener implements Listener {
     @EventHandler
     public void onautoclick(AutoClickEvent e){
         if (!Settings.AUTOCLICK_ACTIVE){
-            System.out.print("NON ATTIVO CANCEL");
             e.setCancelled(true);
             return;
         }
