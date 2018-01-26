@@ -37,7 +37,7 @@ public class TryPlayerListener implements Listener {
 
     @EventHandler
     public void onchange(FoodLevelChangeEvent e) throws StafferNotFoundException{
-        if (StafferUtil.isStaffer((Player)e.getEntity())){
+        if (e.getEntity() instanceof  Player && StafferUtil.isStaffer((Player)e.getEntity()) && StafferUtil.contains(e.getEntity().getUniqueId())){
             if (StafferUtil.getStaffer(e.getEntity().getName()).isStaffMode()){
                 e.setCancelled(true);
             }
