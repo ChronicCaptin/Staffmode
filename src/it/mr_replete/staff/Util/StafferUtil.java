@@ -4,6 +4,7 @@ import it.mr_replete.staff.Staff;
 import it.mr_replete.staff.exception.StafferNotFoundException;
 import it.mr_replete.staff.settings.Settings;
 import it.mr_replete.staff.staff.Staffer;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
@@ -24,7 +25,12 @@ public class StafferUtil {
                 return staffers;
             }
         }
+
         if (staffer == null){
+            if (StafferUtil.isStaffer(Bukkit.getPlayer(name))){
+                fixUP(Bukkit.getPlayer(name));
+                return getStaffer(name);
+            }
             throw new StafferNotFoundException();
         }
         return staffer;
