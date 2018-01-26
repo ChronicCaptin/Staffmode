@@ -1,6 +1,7 @@
 package it.mr_replete.staff.command.staffcommand;
 
 import it.mr_replete.staff.Staff;
+import it.mr_replete.staff.Util.Sender;
 import it.mr_replete.staff.command.GCommand;
 import it.mr_replete.staff.settings.Settings;
 import org.bukkit.Bukkit;
@@ -32,11 +33,14 @@ public class GReport extends GCommand {
             String reason = args[1];
 
             if (Bukkit.getPlayer(possiblePlayer) != null){
+                if (possiblePlayer.equals(sender.getName())){
+                    sender.sendMessage(ChatColor.RED + "You can't report your self");
+                    return;
+                }
 
                 Staff.getInstance().getReportdelay().put(Bukkit.getPlayer(sender.getName()).getUniqueId(), System.currentTimeMillis() + Settings.REPORT_DELAY * 1000);
-
                 for (String messages : Settings.REPORT_FORMAT){
-                    sender.sendMessage(messages.replace("%reporter%", sender.getName()).replace("%reported%", possiblePlayer).replace("%reason%", reason));
+                    Sender.sendMessage(messages.replace("%reporter%", sender.getName()).replace("%reported%", possiblePlayer).replace("%reason%", reason));
                 }
                 sender.sendMessage(ChatColor.GREEN + "Report sent successfully!");
             } else{
